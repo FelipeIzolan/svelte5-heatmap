@@ -1,4 +1,4 @@
-# 🔥 Heatmap.svelte
+# 🔥 svelte5-heatmap
 
 ![image](https://github.com/user-attachments/assets/67412475-ec75-4bcf-980b-9cdc0ffbdfff)
 
@@ -7,12 +7,12 @@ A Svelte 5 heatmap component inspired by GitHub’s contribution graph
 ## 🚀 Getting Started
 
 ```
-npm install Heatmap.svelte
+npm install svelte5-heatmap
 ```
 
 ```svelte
 <script>
-  import Heatmap from "$lib/Heatmap.svelte";
+  import Heatmap from "svelte5-heatmap";
 
   let data = $state<{ [key: string]: number }>({});
   let year = 2025;
@@ -56,4 +56,4 @@ npm install Heatmap.svelte
 
 - [svelte](https://github.com/sveltejs/svelte) - MIT
 - [sveltekit](https://github.com/sveltejs/kit) - MIT
-- [Heatmap.svelte](https://github.com/FelipeIzolan/Heatmap.svelte) - MIT
+- [svelte5-heatmap](https://github.com/FelipeIzolan/svelte5-heatmap) - MIT
