@@ -50,7 +50,7 @@ npm install Heatmap.svelte
 - ``onmouseover`` - onmouseover event.
 
 > [!NOTE]
-> The heatmap size is determined by the parent element's font size, as it uses em units
+> The heatmap size is determined by the parent element's font size, as it uses **em** units.
 
 ## 📜 License
 
