@@ -50,6 +50,6 @@
   "description": "A Svelte 5 heatmap component inspired by GitHub’s contribution graph",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/FelipeIzolan/Heatmap.svelte.git"
+    "url": "git+https://github.com/FelipeIzolan/svelte5-heatmap.git"
   }
 }
