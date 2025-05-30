@@ -1,5 +1,7 @@
 # 🔥 svelte5-heatmap
 
+![image](https://github.com/user-attachments/assets/f1ada592-c3ac-445f-a664-558010203500)
+
 A Svelte 5 heatmap component inspired by GitHub’s contribution graph
 
 ## 🚀 Getting Started
