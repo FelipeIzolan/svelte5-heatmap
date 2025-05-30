@@ -2,11 +2,12 @@
   import "../global.css";
   import Heatmap from "$lib/Heatmap.svelte";
 
+  let data = $state<{ [key: string]: number }>({});
+  let curr = $state("0000-00-00");
+  let year = $state(2025);
+
   let colors;
   // colors = ["#0D41E1", "#0C63E7", "#0A85ED", "#09A6F3", "#07C8F9"];
-
-  let data = $state<{ [key: string]: number }>({});
-  let year = $state(2025);
 
   function fillMap() {
     let map: { [key: string]: number } = {};
@@ -27,16 +28,16 @@
   <title>Heatmap.svelte</title>
 </svelte:head>
 
-<div
-  style="display:flex;gap:0.5em;justify-content:center;align-items:center;margin:2em 0"
->
+<div style="text-align:center;margin:2em 0">
   <img
     src="https://svelte.dev/favicon.png"
     alt="svelte logo"
     width="32"
     height="32"
   />
-  <h1>Heatmap.svelte</h1>
+  <h2>Heatmap.svelte</h2>
+  <span>{curr}</span>
+  <span>{data[curr]}</span>
 </div>
 <div style="font-size:12px">
   <Heatmap
@@ -45,5 +46,6 @@
     {colors}
     onclick={(e) =>
       alert(`${e.target.dataset.date} | ${e.target.dataset.value}`)}
+    onmouseover={(e) => (curr = e.target.dataset.date)}
   />
 </div>

@@ -1,7 +1,5 @@
 # 🔥 svelte5-heatmap
 
-![image](https://github.com/user-attachments/assets/67412475-ec75-4bcf-980b-9cdc0ffbdfff)
-
 A Svelte 5 heatmap component inspired by GitHub’s contribution graph
 
 ## 🚀 Getting Started
@@ -33,21 +31,41 @@ npm install svelte5-heatmap
 <div style="font-size:12px">
   <Heatmap
     {data}
+    {year}
     onclick={(e) => alert(`${e.target.dataset.date} | ${e.target.dataset.value}`)}
   />
 </div>
 ```
-
 ## ⚙️ Props
 
-- ``data`` - Object containing the chart data. Each key must be in ISO date format. `{ '2025-01-02': 5 }` **(required)** 
-- ``colors`` - Array of colors to use for the chart, ordered from lowest to highest. (default = GitHub's graph colors)
-- ``year`` - The heatmap year. (default = current year)
-- ``lday`` - Adds day labels. (default = true)
-- ``lmonth`` - Adds month labels. (default = true)
-- ``onclick`` - onclick event.
-- ``onmouseout`` - onmouseout event.
-- ``onmouseover`` - onmouseover event.
+-   **`data`** (object, **required**)  
+    An object containing chart data where each key is a date in ISO format (`YYYY-MM-DD`) and the value is a number.  
+    Example: `{ '2025-01-02': 5 }`
+
+-   **`colors`** (array, optional)  
+    An array of color values used for the heatmap cells, ordered from the lowest to highest value.  
+    _Default:_ GitHub's contribution graph colors.
+    
+-   **`year`** (number, optional)  
+    The year to display in the heatmap.  
+    _Default:_ Current year.
+    
+-   **`lday`** (boolean, optional)  
+    Whether to display day-of-week labels on the left side.  
+    _Default:_ `true`
+    
+-   **`lmonth`** (boolean, optional)  
+    Whether to display month labels above the calendar.  
+    _Default:_ `true`
+    
+-   **`onclick`** (function, optional)  
+    Function to be called when a heatmap cell is clicked.
+    
+-   **`onmouseover`** (function, optional)  
+    Function to be called when the mouse hovers over a cell.
+    
+-   **`onmouseout`** (function, optional)  
+    Function to be called when the mouse leaves a cell.
 
 > [!NOTE]
 > The heatmap size is determined by the parent element's font size, as it uses **em** units.

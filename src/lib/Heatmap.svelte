@@ -18,7 +18,7 @@
   let { max, calendar } = $derived(getCalendar(data, year));
 </script>
 
-<table style={`width:max-content;font-size:1em`}>
+<table style="font-size:1em">
   {#if lmonth}
     <thead>
       <tr>
@@ -47,17 +47,17 @@
           </td>
         {/if}
         {#each w as d}
-          {#if !d}
-            <td />
-          {:else}
+          {#if d}
             <td
-              style={`width:1em;height:1em;border-radius:1px;background:${getColor(colors, max, d.value)}`}
+              style={`width:1em;height:1em;background:${getColor(colors, max, d.value)}`}
               data-date={d.date}
               data-value={d.value}
               {onclick}
               {onmouseout}
               {onmouseover}
             />
+          {:else}
+            <td />
           {/if}
         {/each}
       </tr>
