@@ -39,7 +39,7 @@
   <span>{curr}</span>
   <span>{data[curr]}</span>
 </div>
-<div style="font-size:12px">
+<div style="font-size:16px">
   <Heatmap
     {data}
     {year}

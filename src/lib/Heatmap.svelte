@@ -8,6 +8,7 @@
     onmouseout,
     onmouseover,
     colors = ["#eff2f5", "#aceebb", "#4ac26b", "#2da44e", "#116329"],
+    className = "Heatmap",
     year = new Date().getFullYear(),
     lday = true,
     lmonth = true,
@@ -18,10 +19,10 @@
   let { max, calendar } = $derived(getCalendar(data, year));
 </script>
 
-<table style="font-size:1em">
+<table class={className} style="font-size:1em">
   {#if lmonth}
     <thead>
-      <tr>
+      <tr style="font-size:0.75em">
         <td style="padding-bottom:0.5em">‎</td>
         <td colspan="5">Jan</td>
         <td colspan="4">Feb</td>
@@ -42,7 +43,7 @@
     {#each calendar as w, i}
       <tr>
         {#if lday}
-          <td style="padding-right:0.5em;font-size:0.85em;">
+          <td style="padding-right:0.5em;font-size:0.75em">
             {["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][i]}
           </td>
         {/if}

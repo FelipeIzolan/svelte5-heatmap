@@ -47,7 +47,11 @@ npm install svelte5-heatmap
 -   **`colors`** (array, optional)  
     An array of color values used for the heatmap cells, ordered from the lowest to highest value.  
     _Default:_ GitHub's contribution graph colors.
-    
+
+-   **`className`** (string, optional)  
+    Custom CSS class name applied to the heatmap. 
+    _Default:_ `"Heatmap"`
+
 -   **`year`** (number, optional)  
     The year to display in the heatmap.  
     _Default:_ Current year.

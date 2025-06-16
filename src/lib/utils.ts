@@ -44,6 +44,7 @@ export type Props = {
   lday?: boolean;
   lmonth?: boolean;
   colors?: string[];
+  className?: string;
 
   onclick?: MouseEventHandler<HTMLTableCellElement>;
   onmouseout?: MouseEventHandler<HTMLTableCellElement>;
